@@ -1,5 +1,6 @@
 package SetOperations;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -79,6 +80,8 @@ public class Sets {
         System.out.println("===================================");
         System.out.println("Press any letter key to return to the main menu");
         System.out.println("==================================");
+
+        System.out.println("Your sets are: " + "\nA: " + inputDataOne + "\nB: " + inputDataTwo);
         //Efficient way to close resources is by wrapping them inside a try parenthesis
         try(Scanner scanner = new Scanner(System.in)){
             while(true){
