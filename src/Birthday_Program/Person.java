@@ -13,12 +13,12 @@ public class Person {
      * @author Brian Otieno Odhiambo
      */
     public BigInteger testDays(int numberOfDaysInAYear){
-        BigInteger bigInteger = new BigInteger("1");
+        BigInteger birthDay = new BigInteger("1");
 
         for(int i= 2; i <= numberOfDaysInAYear; i++){
-            bigInteger = bigInteger.multiply(BigInteger.valueOf(i));
+            birthDay = birthDay.multiply(BigInteger.valueOf(i));
         }
-        return bigInteger;
+        return birthDay;
     }
     //method to calculate how many students share the same birthday.
     public BigDecimal sharedBirthday(){

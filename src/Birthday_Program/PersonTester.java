@@ -1,7 +1,5 @@
 package Birthday_Program;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class PersonTester {
     public static void main(String[] args) {
         //create an instance of the Person class
