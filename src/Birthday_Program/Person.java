@@ -24,7 +24,7 @@ public class Person {
     public BigDecimal sharedBirthday(){
         int classSize = 30; //number of students in the class
 
-        //formula 1 - (365! / (365 - class-size)! x (365 ^ class-size))
+        //formula:  1 - (365! / (365 - class-size)! x (365 ^ class-size))
         BigInteger toThePowerClassSize = new BigInteger("365");
         //365**30
         BigInteger outCome = toThePowerClassSize.pow(30);
