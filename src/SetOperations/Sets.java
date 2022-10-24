@@ -54,21 +54,6 @@ public class Sets {
         inputDataTwo.add("Thursday");
         inputDataTwo.add("Tuesday");
 
-        //test sample for integers
-
-        //List<Integer> inputDataThree = new ArrayList<>();
-        //List<Integer> inputDataFour = new ArrayList<>();
-
-        //inputDataThree.add(2);
-        //inputDataThree.add(4);
-        //inputDataThree.add(6);
-        //inputDataThree.add(8);
-        //inputDataThree.add(10);
-        //inputDataThree.add(12);
-        //inputDataFour.add(4);
-        //inputDataFour.add(6);
-        //inputDataFour.add(8);
-
         System.out.println("==================================");
         System.out.println("Welcome to Brian's Set Operations Program");
         System.out.println("For accuracy make sure you return to the main menu after " +
