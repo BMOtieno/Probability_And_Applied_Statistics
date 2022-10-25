@@ -1,5 +1,4 @@
 package Combinations_Permutations;
-
 public class Permutations {
     /**
      * Program that finds the number of ways to choose a sample of r elements

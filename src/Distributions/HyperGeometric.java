@@ -1,6 +1,13 @@
 package Distributions;
 
 public class HyperGeometric {
+    /**
+     * Program that uses HyperGeometric Distribution to solve the probability of a particular problem
+     *
+     * @param number that will go through the recursive method to perform the operation of calculating the combinations
+     * @return the factorial of the input integer
+     * @author Brian Otieno Odhiambo
+     */
     public static long getCombinations(int number) {
         //Using recursion to get the factorial of number
         if(number == 0) return 1;
