@@ -8,6 +8,12 @@ import java.util.List;
 import java.util.Random;
 
 public class FishMarket {
+    /**
+     * Program that randomly generates seafood, assigns weight randomly and exports
+     * the data to a CSV file
+     *
+     * @author Brian Otieno Odhiambo
+     */
     static List<String> seafood = SeaFood.collectionOfSeaFood();
     public void getSeaFood(){
         Random random = new Random();
@@ -17,6 +23,7 @@ public class FishMarket {
         double crabPrice = random.nextInt(50) / 50.0;
 
         StringBuilder stringBuilder = new StringBuilder();
+        //stored in a try parentheses to efficiently close resources
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("FishMarket.csv"))){
             stringBuilder.append("Index");
             stringBuilder.append(',');
@@ -29,14 +36,18 @@ public class FishMarket {
 
             for(int i = 1; i < 301; i++){
                 String selectedFood = seafood.get(random.nextInt(seafood.size()));
+                //Generate Random Weight
+                double weight = (random.nextInt() % 15) / 10.0;
 
                 stringBuilder.append(i);
                 stringBuilder.append(',');
                 stringBuilder.append(selectedFood + '\t');
+                //so that fish is caught more, and less scallop and crabs
+                if(weight > 9.0) stringBuilder.append("Fish");
                 stringBuilder.append(',');
-                //Generate Random Weight
-                stringBuilder.append((random.nextInt() % 15) / 10.0 + '\t');
+                stringBuilder.append(weight + '\t');
                 stringBuilder.append(',');
+                    //to ensure that the price per lb stay the same with each of the seafood types
                     if(selectedFood.equals("Fish")) stringBuilder.append(fishPrice + '\t');
                     if(selectedFood.equals("Shrimp")) stringBuilder.append(shrimpPrice + '\t');
                     if(selectedFood.equals("Scallop")) stringBuilder.append(scallopPrice + '\t');
