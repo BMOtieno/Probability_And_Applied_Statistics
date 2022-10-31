@@ -4,7 +4,7 @@ import java.util.Random;
 public class MontyHall {
     /**
      * Program that solves the Monty Hall problem with the Monte Carlo Simulation
-     * @author Brian Otieno Odhiambo
+     * @author Brian Otieno Odhiambo in collaboration with Giuseppe Guerini
      */
     public static void runMonty() {
         Random rng = new Random();

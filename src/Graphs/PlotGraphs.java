@@ -9,7 +9,7 @@ public class PlotGraphs {
     /**
      * Program that takes writes to a csv file, coordinates for a linear, salted and smoothed graphs
      * @return prints to the csv the generated coordinates to be graphed
-     * @author Brian Otieno Odhiambo
+     * @author Brian Otieno Odhiambo in collaboration with Ruth Wittek
      *
      * */
     public static void output(){
