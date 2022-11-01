@@ -1,24 +1,40 @@
 package Graphs;
 
-import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
 public class Smoother {
     // Smoother
-    public static void smooth(ArrayList<Double> yValue, int xArea) {
-        for (int i = 0; i < yValue.size(); i++) { // Loop through y values
-            double value = yValue.get(i);
-            int count = 1; // Set count at 1
-            for (int j = 1; j <= xArea; j++) {
-                if (i - j >= 0) {
-                    value += yValue.get(i - j);
-                    count++;
-                } // End if
-                if (i + j < yValue.size()) {
-                    value += yValue.get(i + j);
-                    count++;
-                } // End if
-            } // End inner for
-            value = value / count; // Average y values
-            yValue.set(i, value); // Replace with average
-        } // End outer for
-    } // End Smoother
+    public static void smoothTheGraph() {
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("SmoothedGraph.csv"))){
+            StringBuilder stringBuilder = new StringBuilder();
+            //y = mx + c
+            //m = 2
+            int m = 2;
+            int y = 0;
+            int z = 0;
+            int p = 0;
+            stringBuilder.append("index x");
+            stringBuilder.append(",");
+            stringBuilder.append("index y");
+            stringBuilder.append("\n");
+            for(int i = 0; i < 20; i++){
+                stringBuilder.append(i);
+                stringBuilder.append("\n");
+            }
+            stringBuilder.append("\t");
+            for(int j = 0; j < 20; j++){
+                stringBuilder.append(",");
+                y = (m * (j - 2)) + 1;
+                z = (m * (j + 2)) + 1;
+                p = ((y + z) / 3) + 1;
+                stringBuilder.append(p);
+                stringBuilder.append("\n");
+            }
+            stringBuilder.append(",");
+            bufferedWriter.write(stringBuilder.toString());
+        }catch(Exception ex){
+            System.out.println("Something wrong here");
+        }
+    }
 }
