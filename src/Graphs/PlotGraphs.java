@@ -13,7 +13,7 @@ public class PlotGraphs {
      *
      * */
     public static void output(){
-        String fileName = "Graphing.csv";
+        String fileName = "Graph.csv";
         PrintWriter outputStream = null;
 
         // Try-Catch block for csv file
