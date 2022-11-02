@@ -35,9 +35,7 @@ public class Sets {
     }
     //static method to find the complement of two lists
     public static<T> void complement(List<T> sequence, List<T> sequenceTwo){
-
         sequence.removeAll(sequenceTwo);
-
         System.out.println("Complement: " + sequence);
     }
     // void method for the user to place the input data for a specific operation
