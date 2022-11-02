@@ -10,9 +10,9 @@ public class Salter {
             int m = 2;
             int y = 0;
             int z = 0;
-            stringBuilder.append("index x");
+            stringBuilder.append("Index X");
             stringBuilder.append(",");
-            stringBuilder.append("index y");
+            stringBuilder.append("Index Y");
             stringBuilder.append("\n");
             for(int i = 0; i < 20; i++){
                 stringBuilder.append(i);
